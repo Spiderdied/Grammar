@@ -607,35 +607,407 @@ const vocabData = [
 ];
 
 // ── CORRECTION DATA (50 questions) ──
-const corrData = [{q:"My uncle invited my brother and me to spend the weekend with (a)he and (b)his (c)family (d)members.",parts:["a","b","c","d"],errors:["he","his","family","members"],correct:"a",fix:"him",why:"After a preposition ('with'), use the object pronoun 'him', not the subject pronoun 'he'."},
-{q:"Yasser, will you please make up a sentence using the word 'genius'? Yes, (a)I'll (b)make (c)one (d)now.",parts:["a","b","c","d"],errors:["I'll","make","one","now"],correct:"b",fix:"I'll make one",why:"'Make' here is a transitive verb and needs an object; 'I'll make one' completes the sentence correctly."},
-{q:"The results of this election are more difficult to predict (a)from (b)the last (c)one (d)today.",parts:["a","b","c","d"],errors:["from","the last","one","today"],correct:"a",fix:"than",why:"Comparisons use 'than', not 'from'."},
-{q:"Sarah said she heard someone in the attic, but when we looked we didn't find (a)someone (b)there (c)at (d)all.",parts:["a","b","c","d"],errors:["someone","there","at","all"],correct:"a",fix:"anyone",why:"In negative sentences, use 'anyone' (not 'someone'): 'we didn't find anyone'."},
-{q:"(a)Almost we had given up hope of ever finding (b)a place to (c)live (d)there.",parts:["a","b","c","d"],errors:["Almost","a place","live","there"],correct:"a",fix:"We had almost",why:"'Almost' is a mid-sentence adverb and should modify the verb: 'We had almost given up hope'."},
-{q:"The part of Qena that interested them most (a)were the two colleges they (b)visited (c)last summer (d)there.",parts:["a","b","c","d"],errors:["were","visited","last summer","there"],correct:"a",fix:"was",why:"The subject is 'The part' (singular), so the verb must be 'was', not 'were'."},
-{q:"They too want (a)there names on the (b)programs of the (c)concert (d)tonight.",parts:["a","b","c","d"],errors:["there","programs","concert","tonight"],correct:"a",fix:"their",why:"'There' is an adverb of place. The possessive adjective 'their' is needed."},
-{q:"Trip has always enjoyed (a)looking the flowers and (b)walking through the (c)park (d)near his home.",parts:["a","b","c","d"],errors:["looking the","walking","park","near his home"],correct:"a",fix:"looking at the flowers",why:"'Look' requires the preposition 'at' before its object: 'looking at the flowers'."},
-{q:"I didn't see Tom (a)since he and his wife (b)moved to (c)Alex (d)last year.",parts:["a","b","c","d"],errors:["since","moved","Alex","last year"],correct:"a",fix:"haven't seen",why:"'Since' signals a period from a past point to now, requiring the present perfect: 'I haven't seen Tom since…'"},
-{q:"Oliver won't let his sister play with his toy because he (a)afraid if she will (b)forget to bring it (c)back (d)to him.",parts:["a","b","c","d"],errors:["afraid if","forget","back","to him"],correct:"a",fix:"he is afraid she will",why:"'He afraid' is missing the verb 'is'; and 'if' should be omitted: 'he is afraid she will forget'."},
-{q:"The eighth month of the year is (a)august, so named after the Roman emperor (b)Augustus (c)the Great (d).",parts:["a","b","c","d"],errors:["august","Augustus","the Great","—"],correct:"a",fix:"August",why:"Names of months are proper nouns and must be capitalized: 'August'."},
-{q:"Pip said that he must (a)to go home to help his (b)mother, to finish school, and to pay off his (c)debts (d)quickly.",parts:["a","b","c","d"],errors:["to go","mother","debts","quickly"],correct:"a",fix:"must go",why:"'Must' is a modal verb and is followed directly by the base infinitive (no 'to'): 'must go'."},
-{q:"The three nations have been quarreling (a)between (b)themselves for many (c)years (d)now.",parts:["a","b","c","d"],errors:["between","themselves","years","now"],correct:"a",fix:"among",why:"'Between' is used for two parties; 'among' is used for three or more: 'quarreling among themselves'."},
-{q:"What does that word (a)means the way you used it (b)in (c)this sentence (d)?",parts:["a","b","c","d"],errors:["means","in","this sentence","?"],correct:"a",fix:"mean",why:"After the auxiliary 'does', the base form of the verb is required: 'What does that word mean?'"},
-{q:"Mrs. Mona had (a)rather spend the entire summer in the heat of Qena than travel with her cousin to Hurghada (b)this year (c)at all (d).",parts:["a","b","c","d"],errors:["rather","this year","at all","—"],correct:"a",fix:"would rather",why:"'Had rather' is archaic/incorrect in modern usage; the standard form is 'would rather'."},
-{q:"He gently put the new camera on the desk (a)which his sister had bought (b)last week (c)for him (d).",parts:["a","b","c","d"],errors:["which","last week","for him","—"],correct:"a",fix:"that / restructure",why:"'Which his sister had bought' is a misplaced relative clause; it modifies 'desk' but should modify 'camera'. Restructure for clarity."},
-{q:"He didn't say he (a)will bring the books tomorrow, (b)did he (c)to school (d)?",parts:["a","b","c","d"],errors:["will","did he","to school","?"],correct:"a",fix:"would",why:"In reported/indirect speech within a past context, 'will' shifts to 'would': 'He didn't say he would bring the books.'"},
-{q:"She (a)speaks (b)always English to her boss while she is in the office (c)every day (d).",parts:["a","b","c","d"],errors:["speaks","always","English","every day"],correct:"b",fix:"always speaks",why:"Adverbs of frequency like 'always' are placed between the subject and the main verb: 'She always speaks English.'"},
-{q:"Just as Janet was leaving, we told her we needed eggs (a)cheese and orange juice for our picnic (b)tomorrow (c)afternoon (d).",parts:["a","b","c","d"],errors:["cheese","tomorrow","afternoon","—"],correct:"a",fix:"eggs, cheese,",why:"A list of three or more items requires commas between them: 'eggs, cheese, and orange juice'."},
-{q:"When we were little and would visit her, my grandmother often gave presents to my sister and (a)myself (b)at Christmas (c)every year (d).",parts:["a","b","c","d"],errors:["myself","at Christmas","every year","—"],correct:"a",fix:"me",why:"'Myself' is a reflexive/emphatic pronoun and cannot replace a simple object pronoun. Use 'me': 'to my sister and me'."},
-{q:"Because he had not been able to hear well, Danny asked what the question (a)was? (b)that the teacher had asked (c)earlier (d).",parts:["a","b","c","d"],errors:["was?","that the teacher had asked","earlier","—"],correct:"a",fix:"was",why:"This is an indirect/embedded question within a statement. It uses statement word order and ends with a period, not a question mark."},
-{q:"The critics all said that she was (a)neither attractive nor (b)did she have any talent (c)in the play (d).",parts:["a","b","c","d"],errors:["neither attractive","did she have","in the play","—"],correct:"b",fix:"nor talented",why:"'Neither…nor' requires parallel grammatical structures. 'Neither attractive nor talented' is the correct parallel form."},
-{q:"Her uncle, along with her two cousins, (a)demand that she stay in town one more day (b)because of the storm (c)tonight (d).",parts:["a","b","c","d"],errors:["demand","because of the storm","tonight","—"],correct:"a",fix:"demands",why:"'Along with' does not change the grammatical number of the subject. 'Her uncle' is singular → 'demands'."},
-{q:"We got up early, ate breakfast, and (a)the house was cleaned—all before my aunt arrived (b)that morning (c)at home (d).",parts:["a","b","c","d"],errors:["the house was cleaned","that morning","at home","—"],correct:"a",fix:"cleaned the house",why:"The list must be parallel: 'got up, ate breakfast, and cleaned the house' (all active voice with same subject)."},
-{q:"(a)Whom shall I say is calling? (b)from the office (c)today (d).",parts:["a","b","c","d"],errors:["Whom","from the office","today","—"],correct:"a",fix:"Who",why:"'Who' is the subject of 'is calling', not the object of 'say'. Use the subject pronoun 'Who'."},
-{q:"When you go to visit the Stevensons tomorrow, please bring them (a)theses cake recipes (b)for the party (c)as a gift (d).",parts:["a","b","c","d"],errors:["theses","for the party","as a gift","—"],correct:"a",fix:"these",why:"'Theses' is the plural of 'thesis' (a research paper). The correct demonstrative adjective is 'these'."},
-{q:"Yesterday the foreman spoke to both of us, Aly and (a)I, about our work record (b)in the factory (c)yesterday (d).",parts:["a","b","c","d"],errors:["I","in the factory","yesterday","—"],correct:"a",fix:"me",why:"'Both of us' is followed by an appositive. Since 'us' is an object pronoun, the appositive must also use the object form: 'Aly and me'."},
-{q:"Ahmad's car is certainly faster than (a)any in the race (b)at the moment (c)on the track (d).",parts:["a","b","c","d"],errors:["any","at the moment","on the track","—"],correct:"a",fix:"any other",why:"When comparing something to members of its own group, use 'any other': 'faster than any other car in the race'."},
-{q:"In response to Adam's question as to which (a)restraint we were going to, I replied, the nearest (b)restaurant (c)in town (d).",parts:["a","b","c","d"],errors:["restraint","restaurant","in town","—"],correct:"a",fix:"restaurant",why:"'Restraint' means self-control. The word intended is 'restaurant'. This is a spelling/vocabulary error."},
+const corrData = [
+  {
+    q: "My uncle invited my brother and (a)me to spend the weekend with (b)he and (c)his (d)family.",
+    parts: ["a","b","c","d"],
+    errors: ["me","he","his","family"],
+    correct: "b",
+    fix: "him",
+    why: "After a preposition ('with'), use the object pronoun 'him', not the subject pronoun 'he'."
+  },
+  {
+    q: "If a (a)sentence is excessively long, (b)they may be (c)difficult to (d)comprehend.",
+    parts: ["a","b","c","d"],
+    errors: ["sentence","they","difficult","comprehend"],
+    correct: "b",
+    fix: "it",
+    why: "The pronoun must agree with its singular antecedent 'a sentence' → use 'it', not 'they'."
+  },
+  {
+    q: "I've been (a)sitting here for (b)hours (c)think about my (d)problem.",
+    parts: ["a","b","c","d"],
+    errors: ["sitting","hours","think","problem"],
+    correct: "c",
+    fix: "thinking",
+    why: "A participial phrase modifying the subject requires the -ing form: 'thinking about my problem'."
+  },
+  {
+    q: "When asked his position on taxes, the politician said: \"There are (a)no easy (b)answers (c).\"\n(a)no  (b)answers  (c).  (d)said",
+    parts: ["a","b","c","d"],
+    errors: ["no","answers",".","said"],
+    correct: "d",
+    fix: "No error",
+    why: "The sentence is grammatically correct. All four underlined parts are acceptable as written."
+  },
+  {
+    q: "He skates (a)well, he (b)sings well, and he runs well, (c)and he (d)skis well.",
+    parts: ["a","b","c","d"],
+    errors: ["well","sings well","and he","skis well"],
+    correct: "c",
+    fix: "Remove the second 'and'; use a comma instead",
+    why: "In a series of parallel clauses, 'and' should appear only before the final item. Having two 'and's creates a faulty list."
+  },
+  {
+    q: "I (a)rather (b)stay home tonight to (c)study for my final exam in (d)history.",
+    parts: ["a","b","c","d"],
+    errors: ["rather","stay","study","history"],
+    correct: "a",
+    fix: "would rather",
+    why: "'Rather' alone cannot function as a modal auxiliary. The correct expression is 'would rather' + bare infinitive."
+  },
+  {
+    q: "The general wanted to be sure he received his (a)commander's-in-chief (b)blessing on (c)his (d)plan.",
+    parts: ["a","b","c","d"],
+    errors: ["commander's-in-chief","blessing","his","plan"],
+    correct: "a",
+    fix: "commander-in-chief's",
+    why: "The possessive 's must be attached to the final word of a compound noun: 'commander-in-chief's'."
+  },
+  {
+    q: "My sister always said she ran like (a)I (b)did when we (c)were (d)young.",
+    parts: ["a","b","c","d"],
+    errors: ["I","did","were","young"],
+    correct: "a",
+    fix: "me",
+    why: "When 'like' functions as a preposition, it requires an object pronoun: 'like me', not 'like I'."
+  },
+  {
+    q: "That was (a)me (b)whom (c)you saw on (d)the train.",
+    parts: ["a","b","c","d"],
+    errors: ["me","whom","you","the train"],
+    correct: "b",
+    fix: "who",
+    why: "'Who' is required here because it serves as the subject of 'saw' in the relative clause, not as an object."
+  },
+  {
+    q: "I'm tired after such a long day, so I think I'll (a)lay (b)down and (c)take a (d)nap.",
+    parts: ["a","b","c","d"],
+    errors: ["lay","down","take","nap"],
+    correct: "a",
+    fix: "lie",
+    why: "'Lie down' means to recline (intransitive). 'Lay' is transitive and requires a direct object. Use 'lie down'."
+  },
+  {
+    q: "Neither rain nor sleet nor snow (a)keep the (b)mailman from his (c)appointed (d)rounds.",
+    parts: ["a","b","c","d"],
+    errors: ["keep","mailman","appointed","rounds"],
+    correct: "a",
+    fix: "keeps",
+    why: "With 'neither…nor', the verb agrees with the nearest subject ('snow', singular) → 'keeps'."
+  },
+  {
+    q: "It was (a)me at the (b)door when you were (c)taking a (d)bath.",
+    parts: ["a","b","c","d"],
+    errors: ["me","door","taking","bath"],
+    correct: "a",
+    fix: "I",
+    why: "After the verb 'to be', formal English requires the subject pronoun: 'It was I at the door'."
+  },
+  {
+    q: "If her grandfather (a)would have lived three more days he (b)would have been (c)100 years (d)old.",
+    parts: ["a","b","c","d"],
+    errors: ["would have lived","would have been","100 years","old"],
+    correct: "a",
+    fix: "had lived",
+    why: "In a third conditional if-clause, 'had + past participle' is required, not 'would have + past participle'."
+  },
+  {
+    q: "To (a)slowly chew one's food is not only (b)a polite, but (c)also a (d)healthy habit.",
+    parts: ["a","b","c","d"],
+    errors: ["slowly chew","a polite","also a","healthy habit"],
+    correct: "b",
+    fix: "a polite habit",
+    why: "'Not only…but also' requires parallel grammatical structures. 'A polite' must be completed to 'a polite habit' to match 'a healthy habit'."
+  },
+  {
+    q: "The Joneses should (a)of been here by now. I can't (b)understand (c)what's (d)keeping them.",
+    parts: ["a","b","c","d"],
+    errors: ["of","understand","what's","keeping"],
+    correct: "a",
+    fix: "have",
+    why: "'Should of' is a phonetic misspelling of 'should have'. Modal verbs are always followed by 'have', not 'of'."
+  },
+  {
+    q: "Before he visited his (a)granddaughter's home, he sent her a (b)gift in (c)the (d)mail.",
+    parts: ["a","b","c","d"],
+    errors: ["granddaughter's","gift","the","mail"],
+    correct: "d",
+    fix: "No error",
+    why: "The sentence is grammatically correct. All underlined parts are acceptable as written."
+  },
+  {
+    q: "When people are careful to keep their cars in good repair, (a)one is (b)rewarded by (c)good car (d)performance.",
+    parts: ["a","b","c","d"],
+    errors: ["one is","rewarded","good car","performance"],
+    correct: "a",
+    fix: "they are",
+    why: "The subject 'people' (plural, third person) requires the pronoun 'they', not the impersonal 'one', to maintain agreement."
+  },
+  {
+    q: "You (a)arent the only one who (b)feels that (c)way about him; a lot of people (d)love him.",
+    parts: ["a","b","c","d"],
+    errors: ["arent","feels","way","love"],
+    correct: "a",
+    fix: "aren't",
+    why: "'Arent' is missing the apostrophe required in the contraction 'aren't' (are + not)."
+  },
+  {
+    q: "Yasser, will you please make up a sentence using the word \"genius\"? Yes, I'll (a)make (b). (c) (d)",
+    parts: ["a","b","c","d"],
+    errors: ["make","—","—","—"],
+    correct: "a",
+    fix: "make one",
+    why: "'Make' here is a transitive verb and requires an object. The correct response is 'I'll make one'."
+  },
+  {
+    q: "The results of this election are more difficult to predict (a)from (b)the (c)last (d)one.",
+    parts: ["a","b","c","d"],
+    errors: ["from","the","last","one"],
+    correct: "a",
+    fix: "than",
+    why: "Comparisons in English use 'than', not 'from': 'more difficult to predict than the last one'."
+  },
+  {
+    q: "Sarah said she heard (a)someone in the attic, but when we looked we didn't find (b)someone (c)there (d).",
+    parts: ["a","b","c","d"],
+    errors: ["someone","someone","there","."],
+    correct: "b",
+    fix: "anyone",
+    why: "In negative sentences, the indefinite pronoun 'anyone' (not 'someone') is required after 'didn't'."
+  },
+  {
+    q: "(a)Almost we had given up hope of ever finding (b)a place to (c)live (d).",
+    parts: ["a","b","c","d"],
+    errors: ["Almost we","a place","live","."],
+    correct: "a",
+    fix: "We had almost",
+    why: "The adverb 'almost' modifies the verb and must be placed after the auxiliary: 'We had almost given up hope'."
+  },
+  {
+    q: "The part of Qena that interested them most (a)were the two colleges (b)they (c)visited (d).",
+    parts: ["a","b","c","d"],
+    errors: ["were","they","visited","."],
+    correct: "a",
+    fix: "was",
+    why: "The subject is 'The part' (singular), so the verb must be singular: 'was', not 'were'."
+  },
+  {
+    q: "They too want (a)there names on the (b)programs of the (c)concert (d).",
+    parts: ["a","b","c","d"],
+    errors: ["there","programs","concert","."],
+    correct: "a",
+    fix: "their",
+    why: "'There' is an adverb of place. The possessive adjective 'their' is needed to modify 'names'."
+  },
+  {
+    q: "Pamela doesn't want to (a)attend the seminar and Sheila doesn't want (b)too (c). (d)",
+    parts: ["a","b","c","d"],
+    errors: ["attend","too",".","."],
+    correct: "b",
+    fix: "either",
+    why: "In negative sentences, 'either' replaces 'too': 'Sheila doesn't want to, either'."
+  },
+  {
+    q: "I saw the boy (a)playing in the yard (b)with the (c)red (d)scarf.",
+    parts: ["a","b","c","d"],
+    errors: ["playing in the yard","with the","red","scarf"],
+    correct: "b",
+    fix: "I saw the boy with the red scarf playing in the yard",
+    why: "The modifier 'with the red scarf' is misplaced. It must directly follow 'boy', not 'yard', to avoid ambiguity."
+  },
+  {
+    q: "Now that the newspaper (a)arrived we can (b)see the scores of the (c)tennis (d)matches.",
+    parts: ["a","b","c","d"],
+    errors: ["arrived","see","tennis","matches"],
+    correct: "a",
+    fix: "has arrived",
+    why: "'Now that' signals a recently completed action requiring the present perfect: 'has arrived'."
+  },
+  {
+    q: "Trip has always enjoyed (a)looking the flowers and (b)walking through (c)the (d)park.",
+    parts: ["a","b","c","d"],
+    errors: ["looking the flowers","walking through","the","park"],
+    correct: "a",
+    fix: "looking at the flowers",
+    why: "The verb 'look' requires the preposition 'at' before its object: 'looking at the flowers'."
+  },
+  {
+    q: "I didn't see Tom (a)since he and his wife (b)moved to (c)Alex (d).",
+    parts: ["a","b","c","d"],
+    errors: ["didn't see","moved","Alex","."],
+    correct: "a",
+    fix: "haven't seen",
+    why: "'Since' introducing a time reference from the past to the present requires the present perfect: 'haven't seen'."
+  },
+  {
+    q: "(a)Our's is not to (b)reason (c)why is the beginning of a (d)famous quotation.",
+    parts: ["a","b","c","d"],
+    errors: ["Our's","reason","why","famous"],
+    correct: "a",
+    fix: "Ours",
+    why: "'Ours' is an absolute possessive pronoun and never takes an apostrophe. 'Our's' is incorrect."
+  },
+  {
+    q: "Oliver won't let his sister play with his toy because he (a)afraid if she (b)will (c)forget to bring it (d)back.",
+    parts: ["a","b","c","d"],
+    errors: ["afraid","will","forget","back"],
+    correct: "a",
+    fix: "is afraid",
+    why: "'He afraid' is missing the verb 'to be'. The correct form is 'he is afraid'."
+  },
+  {
+    q: "The eighth month of the year is (a)august, so named after the (b)Roman emperor (c)Augustus (d).",
+    parts: ["a","b","c","d"],
+    errors: ["august","Roman emperor","Augustus","."],
+    correct: "a",
+    fix: "August",
+    why: "Names of months are proper nouns and must be capitalized: 'August', not 'august'."
+  },
+  {
+    q: "Pip said that he must (a)to go home to (b)help his mother, to (c)finish school, and to (d)pay off his debts.",
+    parts: ["a","b","c","d"],
+    errors: ["to go","help","finish","pay off"],
+    correct: "a",
+    fix: "go",
+    why: "'Must' is a modal verb and is always followed directly by the bare infinitive (without 'to'): 'must go'."
+  },
+  {
+    q: "The three nations have been quarreling (a)between (b)themselves for (c)many (d)years.",
+    parts: ["a","b","c","d"],
+    errors: ["between","themselves","many","years"],
+    correct: "a",
+    fix: "among",
+    why: "'Between' is used for two parties; 'among' is used for three or more: 'quarreling among themselves'."
+  },
+  {
+    q: "What (a)does that word (b)the one you used to describe your brother (c)means the way you (d)used it?",
+    parts: ["a","b","c","d"],
+    errors: ["does","the one you used to describe your brother","means","used it"],
+    correct: "c",
+    fix: "mean",
+    why: "After the auxiliary 'does', the base form of the verb is required: 'What does that word mean?'"
+  },
+  {
+    q: "Mrs. Mona had (a)rather spend the entire summer in the heat of (b)Qena than (c)travel with her cousin to (d)Hurghada.",
+    parts: ["a","b","c","d"],
+    errors: ["rather","Qena","travel","Hurghada"],
+    correct: "a",
+    fix: "would rather",
+    why: "'Had rather' is not standard modern usage. The correct expression is 'would rather' + bare infinitive."
+  },
+  {
+    q: "He gently put the new camera on the desk (a)which his (b)sister had (c)bought (d).",
+    parts: ["a","b","c","d"],
+    errors: ["which","sister","bought","."],
+    correct: "a",
+    fix: "that his sister had bought (or restructure: 'He gently put on the desk the camera his sister had bought')",
+    why: "The relative clause 'which his sister had bought' is misplaced and appears to modify 'desk'. Restructure so it clearly modifies 'camera'."
+  },
+  {
+    q: "He didn't say he (a)will bring the books (b)tomorrow, (c)did (d)he?",
+    parts: ["a","b","c","d"],
+    errors: ["will","tomorrow","did","he"],
+    correct: "a",
+    fix: "would",
+    why: "In reported speech following a past-tense main clause, 'will' shifts back to 'would': 'he didn't say he would bring'."
+  },
+  {
+    q: "She (a)speaks (b)always English to her boss while she is (c)in the (d)office.",
+    parts: ["a","b","c","d"],
+    errors: ["speaks","always","in the","office"],
+    correct: "b",
+    fix: "always speaks",
+    why: "Adverbs of frequency such as 'always' are placed between the subject and the main verb: 'She always speaks English'."
+  },
+  {
+    q: "Just as Janet was leaving, we told her we needed eggs (a)cheese and (b)orange juice for (c)our (d)picnic.",
+    parts: ["a","b","c","d"],
+    errors: ["cheese","orange juice","our","picnic"],
+    correct: "a",
+    fix: "eggs, cheese,",
+    why: "Items in a list of three or more must be separated by commas: 'eggs, cheese, and orange juice'."
+  },
+  {
+    q: "When we were little and would visit her, my grandmother often gave presents to my sister and (a)myself (b). (c) (d)",
+    parts: ["a","b","c","d"],
+    errors: ["myself","—","—","—"],
+    correct: "a",
+    fix: "me",
+    why: "'Myself' is a reflexive/emphatic pronoun and cannot substitute for a simple indirect object. Use the object pronoun 'me'."
+  },
+  {
+    q: "Because he had not been able to hear well, Danny asked what the question (a)was (b)? (c) (d)",
+    parts: ["a","b","c","d"],
+    errors: ["was","?","—","—"],
+    correct: "b",
+    fix: "Remove the question mark; use a period",
+    why: "This is an indirect (embedded) question within a declarative sentence. It uses statement word order and ends with a period, not a question mark."
+  },
+  {
+    q: "The critics all said that she was (a)neither attractive nor (b)did she have any (c)talent (d).",
+    parts: ["a","b","c","d"],
+    errors: ["neither attractive","did she have","talent","."],
+    correct: "b",
+    fix: "nor talented",
+    why: "'Neither…nor' requires parallel grammatical structures. 'Neither attractive' (adjective) must be matched by 'nor talented' (adjective), not by a clause."
+  },
+  {
+    q: "Her uncle, along with her two cousins, (a)demand that she (b)stay in town (c)one more (d)day.",
+    parts: ["a","b","c","d"],
+    errors: ["demand","stay","one more","day"],
+    correct: "a",
+    fix: "demands",
+    why: "'Along with' is a parenthetical phrase and does not change the grammatical number of the subject. 'Her uncle' (singular) requires 'demands'."
+  },
+  {
+    q: "We got up early, ate breakfast, and (a)the house was cleaned—all before my (b)aunt (c)arrived (d).",
+    parts: ["a","b","c","d"],
+    errors: ["the house was cleaned","aunt","arrived","."],
+    correct: "a",
+    fix: "cleaned the house",
+    why: "Parallel structure requires all verbs to share the same subject and voice: 'got up, ate breakfast, and cleaned the house' (all active)."
+  },
+  {
+    q: "(a)Whom shall (b)I say (c)is (d)calling?",
+    parts: ["a","b","c","d"],
+    errors: ["Whom","I","is","calling"],
+    correct: "a",
+    fix: "Who",
+    why: "'Who' is the subject of the embedded clause 'is calling'. 'Whom' is an object form and is incorrect here."
+  },
+  {
+    q: "When you go to visit the Stevensons tomorrow, please bring them (a)theses cake (b)recipes (c). (d)",
+    parts: ["a","b","c","d"],
+    errors: ["theses","recipes",".","."],
+    correct: "a",
+    fix: "these",
+    why: "'Theses' is the plural of the noun 'thesis'. The demonstrative adjective needed here is 'these'."
+  },
+  {
+    q: "Yesterday the foreman spoke to both of us, Aly and (a)I, about our (b)work (c)record. He was (d)impressed.",
+    parts: ["a","b","c","d"],
+    errors: ["I","work","record","impressed"],
+    correct: "a",
+    fix: "me",
+    why: "The appositive renames 'us' (object pronoun), so it must also use the object form: 'Aly and me'."
+  },
+  {
+    q: "Ahmad's car is certainly faster than (a)any in (b)the (c)race (d).",
+    parts: ["a","b","c","d"],
+    errors: ["any","the","race","."],
+    correct: "a",
+    fix: "any other",
+    why: "When comparing a member to others in the same group, 'any other' is required to avoid a logical contradiction: 'faster than any other car in the race'."
+  },
+  {
+    q: "In response to Adam's question as to which (a)restraint we were going to, I (b)replied, (c)the (d)nearest.",
+    parts: ["a","b","c","d"],
+    errors: ["restraint","replied","the","nearest"],
+    correct: "a",
+    fix: "restaurant",
+    why: "'Restraint' means self-control. The intended word is 'restaurant'. This is a vocabulary/spelling error."
+  }
 ];
 
 /* ════════════════════════════════════
