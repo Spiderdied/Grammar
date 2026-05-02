@@ -13,7 +13,6 @@
     color:#fff;
     padding-bottom:80px;
   }
-  /* ── NAV ── */
   .bottom-nav{
     position:fixed;bottom:0;left:0;right:0;
     background:rgba(255,255,255,.08);
@@ -31,7 +30,6 @@
   }
   .nav-btn .icon{font-size:20px;}
   .nav-btn.active{color:#a78bfa;}
-  /* ── PROGRESS ── */
   .progress-bar{
     position:fixed;top:0;left:0;right:0;height:4px;
     background:rgba(255,255,255,.1);z-index:99;
@@ -41,7 +39,6 @@
     background:linear-gradient(90deg,#a78bfa,#60a5fa);
     transition:width .4s ease;
   }
-  /* ── PAGE ── */
   .page{display:none;padding:24px 16px;max-width:860px;margin:0 auto;animation:fadeIn .35s ease;}
   .page.active{display:block;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -52,7 +49,6 @@
     padding-top:18px;
   }
   .page-subtitle{color:rgba(255,255,255,.5);font-size:13px;margin-bottom:22px;}
-  /* ── CARDS ── */
   .card{
     background:rgba(255,255,255,.07);
     backdrop-filter:blur(16px);
@@ -75,7 +71,6 @@
     padding:3px 12px;font-size:11px;font-weight:700;
     margin-bottom:10px;letter-spacing:.5px;
   }
-  /* ── TABS ── */
   .tab-row{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
   .tab{
     padding:8px 18px;border-radius:30px;border:1px solid rgba(255,255,255,.15);
@@ -83,7 +78,6 @@
     font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;
   }
   .tab.active{background:#a78bfa;color:#fff;border-color:#a78bfa;}
-  /* ── QUIZ ── */
   .q-card{
     background:rgba(255,255,255,.07);
     border:1px solid rgba(255,255,255,.12);
@@ -110,7 +104,6 @@
   }
   .feedback.ok{background:rgba(52,211,153,.15);color:#34d399;}
   .feedback.bad{background:rgba(248,113,113,.15);color:#f87171;}
-  /* text input */
   .ans-input{
     width:100%;padding:10px 14px;border-radius:12px;
     border:1px solid rgba(255,255,255,.2);
@@ -126,7 +119,6 @@
   }
   .submit-btn:hover{opacity:.85;}
   .submit-btn:disabled{opacity:.4;cursor:default;}
-  /* score */
   .score-box{
     text-align:center;padding:28px;
     background:rgba(255,255,255,.07);
@@ -142,17 +134,6 @@
     border:none;background:#a78bfa;color:#fff;
     font-weight:700;font-size:14px;cursor:pointer;
   }
-  /* section nav */
-  .sec-nav{display:flex;justify-content:space-between;margin-top:20px;gap:10px;}
-  .sec-nav button{
-    padding:10px 22px;border-radius:30px;border:none;
-    background:rgba(255,255,255,.1);color:#fff;
-    font-weight:600;font-size:13px;cursor:pointer;
-    transition:background .2s;
-  }
-  .sec-nav button:hover{background:rgba(167,139,250,.35);}
-  .sec-nav button:disabled{opacity:.3;cursor:default;}
-  /* definition cards */
   .def-card{
     background:rgba(255,255,255,.07);
     border:1px solid rgba(255,255,255,.12);
@@ -169,29 +150,23 @@
 </head>
 <body>
 
-<!-- Progress bar -->
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
-<!-- ═══════════════ PAGE 1: GRAMMAR ═══════════════ -->
+<!-- PAGE 1: GRAMMAR -->
 <div class="page active" id="page-grammar">
   <div class="page-title">📖 Grammar</div>
   <div class="page-subtitle">South Valley University · Dr. Mostafa Abdelrahim</div>
-
   <div class="tab-row">
     <div class="tab active" onclick="showGrammarTab('explain')">Explanations</div>
     <div class="tab" onclick="showGrammarTab('articles-q')">Articles Quiz (105 Qs)</div>
     <div class="tab" onclick="showGrammarTab('present-q')">Present Tenses Quiz</div>
   </div>
-
-  <!-- EXPLANATIONS -->
   <div id="grammar-explain">
-
     <div class="badge">ARTICLES</div>
     <div class="card">
       <h3>What is an Article?</h3>
       <p>An article is an adjective that modifies nouns. English has two types: <strong>a/an</strong> (indefinite) and <strong>the</strong> (definite). Use <em>a/an</em> for non-specific things; use <em>the</em> for specific, known things.</p>
     </div>
-
     <div class="card">
       <h3>Indefinite Article: A / AN</h3>
       <p>Use <strong>a</strong> before consonant sounds and <strong>an</strong> before vowel sounds or a silent h.</p>
@@ -207,7 +182,6 @@
         <li>Certain quantities → <em>a dozen, a hundred, a lot of</em></li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Omission of A / AN</h3>
       <ul>
@@ -217,7 +191,6 @@
         <li>Double expressions → <em>arm in arm, day after day</em></li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Definite Article: THE</h3>
       <p>Use <strong>the</strong> when both speaker and listener know exactly what is referred to.</p>
@@ -232,12 +205,10 @@
         <li>Nationalities → <em>the Egyptians, the Chinese</em></li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Zero Article (No Article)</h3>
       <p>No article is used with nouns referring to their <em>normal purpose</em>: <strong>go to school</strong> (to learn), <strong>in hospital</strong> (ill), <strong>at work</strong>, <strong>at sea</strong>, <strong>go to bed</strong>. But when referring to the place itself: <em>I went to <strong>the</strong> school for a meeting.</em></p>
     </div>
-
     <div class="badge" style="margin-top:10px">PRESENT SIMPLE</div>
     <div class="card">
       <h3>What is the Simple Present?</h3>
@@ -253,7 +224,6 @@
         <li>Non-progressive verbs → <em>I believe you.</em> (NOT I am believing)</li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Non-Progressive (Stative) Verbs</h3>
       <p>These verbs describe states, not actions, and are never used in continuous forms:</p>
@@ -261,7 +231,6 @@
         agree · believe · belong · contain · depend · dislike · feel · hate · hear · know · like · love · mean · need · own · prefer · realize · remember · see · seem · smell · suppose · taste · think · understand · want · wish
       </div>
     </div>
-
     <div class="badge" style="margin-top:10px">PRESENT CONTINUOUS</div>
     <div class="card">
       <h3>What is the Present Continuous?</h3>
@@ -276,7 +245,6 @@
         <li>Annoying habits (with always) → <em>He is always losing his keys!</em></li>
       </ul>
     </div>
-
     <div class="card">
       <h3>Spelling Rules for -ing</h3>
       <ul>
@@ -286,8 +254,6 @@
       </ul>
     </div>
   </div>
-
-  <!-- ARTICLES QUIZ -->
   <div id="grammar-articles-q" style="display:none">
     <div id="art-quiz-container"></div>
     <div id="art-score-box" style="display:none" class="score-box">
@@ -296,8 +262,6 @@
       <button class="retry-btn" onclick="startArticlesQuiz()">Try Again</button>
     </div>
   </div>
-
-  <!-- PRESENT TENSES QUIZ -->
   <div id="grammar-present-q" style="display:none">
     <div id="pres-quiz-container"></div>
     <div id="pres-score-box" style="display:none" class="score-box">
@@ -308,7 +272,7 @@
   </div>
 </div>
 
-<!-- ═══════════════ PAGE 2: VOCABULARY ═══════════════ -->
+<!-- PAGE 2: VOCABULARY -->
 <div class="page" id="page-vocab">
   <div class="page-title">📚 Vocabulary</div>
   <div class="page-subtitle">50 Questions – Choose the best synonym/replacement</div>
@@ -320,7 +284,7 @@
   </div>
 </div>
 
-<!-- ═══════════════ PAGE 3: CORRECTION ═══════════════ -->
+<!-- PAGE 3: CORRECTION -->
 <div class="page" id="page-correction">
   <div class="page-title">✏️ Error Correction</div>
   <div class="page-subtitle">50 Questions – Find the underlined error</div>
@@ -332,11 +296,10 @@
   </div>
 </div>
 
-<!-- ═══════════════ PAGE 4: DEFINITIONS ═══════════════ -->
+<!-- PAGE 4: DEFINITIONS -->
 <div class="page" id="page-defs">
   <div class="page-title">📝 Definitions</div>
   <div class="page-subtitle">Key grammar terms explained clearly</div>
-
   <div class="badge">ARTICLES</div>
   <div class="def-card">
     <div class="def-term">Article</div>
@@ -370,7 +333,6 @@
     <div class="def-term">Gender</div>
     <div class="def-body">The use of different grammatical forms to show the difference between masculine, feminine, neuter, or between human and nonhuman.</div>
   </div>
-
   <div class="badge" style="margin-top:14px">PRESENT SIMPLE</div>
   <div class="def-card">
     <div class="def-term">Simple Present Tense</div>
@@ -402,7 +364,6 @@
     <div class="def-body">A clause introduced by a time conjunction (after, when, until, as soon as) in which the simple present is used even when referring to the future.</div>
     <div class="def-example">Example: I'll wait until you get back.</div>
   </div>
-
   <div class="badge" style="margin-top:14px">PRESENT CONTINUOUS</div>
   <div class="def-card">
     <div class="def-term">Present Continuous Tense</div>
@@ -421,7 +382,6 @@
   </div>
 </div>
 
-<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-btn active" onclick="showPage('grammar',this)">
     <span class="icon">📖</span>Grammar
@@ -438,13 +398,10 @@
 </nav>
 
 <script>
-/* ════════════════════════════════════
-   DATA
-════════════════════════════════════ */
-
-// ── ARTICLES QUIZ DATA (105 fill-in blanks from book, presented as MCQ) ──
+/* ══════════════════════════════════════
+   ARTICLES DATA (105 questions)
+══════════════════════════════════════ */
 const articlesData = [
-  // Section I: a/an (35 questions)
   {q:"My neighbour is ___ photographer; let's ask him for ___ advice about color films.",choices:["a / -","an / an","a / an","an / -"],ans:0,hint:"'photographer' starts with a consonant; 'advice' is uncountable."},
   {q:"We had ___ fish and ___ chips for ___ lunch. That doesn't sound ___ very interesting lunch.",choices:["- / - / - / a","a / - / - / a","- / - / a / a","a / the / - / a"],ans:0,hint:"Fish, chips and lunch (meals) take no article; but 'a very interesting lunch' needs a/an."},
   {q:"I had ___ very bad night; I didn't sleep ___ wink.",choices:["a / a","- / a","a / -","an / a"],ans:0,hint:"'A very bad night' needs 'a'; 'a wink' is a fixed expression."},
@@ -480,8 +437,6 @@ const articlesData = [
   {q:"___ little is known about the effects of this drug; yet ___ chemist will sell it to you without ___ prescription.",choices:["A / a / a","The / a / the","A / the / a","- / a / -"],ans:0,hint:"'A little' = hardly any; 'a chemist' = any chemist; 'a prescription'."},
   {q:"I have ___ little money left; let's have dinner in ___ restaurant.",choices:["a / a","- / a","a / the","- / the"],ans:0,hint:"'a little money' = some; 'a restaurant' – first mention."},
   {q:"Would it be ___ trouble to you to buy me ___ newspaper on your way home?",choices:["a / a","- / a","the / the","a / the"],ans:0,hint:"'a trouble' and 'a newspaper' – both singular countable first mentions."},
-
-  // Section II: the (35 questions)
   {q:"___ youngest boy has just started going to ___ school; ___ eldest boy is at ___ college.",choices:["The / - / the / -","- / - / the / -","The / the / the / -","The / - / the / the"],ans:0,hint:"'The youngest/eldest' = superlative; 'to school/at college' = no article (purpose)."},
   {q:"She lives on ___ top floor of an old house. When ___ wind blows, all ___ windows rattle.",choices:["the / the / the","- / the / the","the / - / the","the / the / -"],ans:0,hint:"'the top floor' specific; 'the wind', 'the windows' – already identified by context."},
   {q:"___ darkness doesn't worry ___ cats; ___ cats can see in ___ dark.",choices:["- / - / - / the","The / the / the / the","- / the / - / the","The / - / - / the"],ans:0,hint:"Darkness and cats in general = no article; 'the dark' = fixed expression."},
@@ -513,8 +468,6 @@ const articlesData = [
   {q:"___ windows are supposed to let in ___ light; but ___ windows of this house are so small that we have to have ___ electric light on all ___ time.",choices:["- / - / the / - / the","The / the / the / the / the","- / the / the / - / the","- / - / - / the / the"],ans:0,hint:"'Windows' general then 'the windows' specific; light = uncountable; 'the time' specific."},
   {q:"There'll always be a conflict between ___ old and ___ young. ___ young people want ___ change but ___ old people want ___ things to stay ___ same.",choices:["the / the / - / - / - / - / the","- / - / - / - / - / - / -","the / the / - / - / - / the / the","the / the / The / - / - / - / the"],ans:0,hint:"'the old/the young' = adjectives as noun classes; change = uncountable; 'the same' fixed."},
   {q:"___ people think that ___ lead is ___ heaviest metal, but ___ gold is heavier.",choices:["- / - / the / -","The / the / the / -","- / the / the / -","- / - / - / the"],ans:0,hint:"General people; metals general; 'the heaviest' superlative; gold general."},
-
-  // Section III: a/an/the mix (35 questions)
   {q:"There was ___ knock on ___ door. I opened it and found ___ small dark man in ___ check overcoat and ___ soft hat.",choices:["a / the / a / a / a","the / a / a / a / a","a / the / the / a / a","a / - / a / a / a"],ans:0,hint:"'a knock', 'the door' (already known), 'a small dark man', 'a check overcoat', 'a soft hat'."},
   {q:"He said he was ___ employee of ___ gas company and had come to read ___ meter.",choices:["an / a / the","a / a / the","an / the / a","a / the / the"],ans:0,hint:"'an employee' vowel; 'a gas company' first mention; 'the meter' specific."},
   {q:"But I had ___ suspicion that he wasn't speaking ___ truth because ___ meter readers usually wear ___ peaked caps.",choices:["a / the / - / -","the / - / the / -","a / - / - / -","a / the / - / the"],ans:0,hint:"'a suspicion'; 'the truth' fixed; meter readers general; peaked caps plural."},
@@ -552,7 +505,9 @@ const articlesData = [
   {q:"___ apples are sold by ___ pound. These are ten pence ___ pound.",choices:["- / the / a","The / - / a","- / a / the","The / the / a"],ans:0,hint:"Apples general; 'by the pound' = fixed rate expression; 'ten pence a pound' = rate."},
 ];
 
-// ── VOCABULARY DATA (50 questions) ──
+/* ══════════════════════════════════════
+   VOCABULARY DATA (50 questions)
+══════════════════════════════════════ */
 const vocabData = [
   {q:"We inferred from his remarks that he was happy about the project.",u:"inferred",choices:["assumed","answered","heard","misunderstood"],ans:0},
   {q:"He was fined 100 pounds by the magistrate and given a strong warning.",u:"magistrate",choices:["emperor","judge","lawyer","policeman"],ans:1},
@@ -606,529 +561,368 @@ const vocabData = [
   {q:"We sometimes visit the people that live next-door.",u:"the people that live next-door",choices:["our enemies","our friends","our neighbors","our relatives"],ans:2},
 ];
 
-// ── CORRECTION DATA (50 questions) ──
+/* ══════════════════════════════════════
+   CORRECTION DATA (50 questions)
+   Each errors[] entry maps EXACTLY to the
+   underlined segment for that label (a–d).
+══════════════════════════════════════ */
 const corrData = [
   {
-    q: "My uncle invited my brother and (a)me to spend the weekend with (b)he and (c)his (d)family.",
-    parts: ["a","b","c","d"],
+    q: "My uncle invited my brother and (a)<u>me</u> to spend the weekend with (b)<u>he</u> and (c)<u>his</u> (d)<u>family</u>.",
     errors: ["me","he","his","family"],
-    correct: "b",
+    correct: 1,
     fix: "him",
     why: "After a preposition ('with'), use the object pronoun 'him', not the subject pronoun 'he'."
   },
   {
-    q: "If a (a)sentence is excessively long, (b)they may be (c)difficult to (d)comprehend.",
-    parts: ["a","b","c","d"],
+    q: "If a (a)<u>sentence</u> is excessively long, (b)<u>they</u> may be (c)<u>difficult</u> to (d)<u>comprehend</u>.",
     errors: ["sentence","they","difficult","comprehend"],
-    correct: "b",
+    correct: 1,
     fix: "it",
     why: "The pronoun must agree with its singular antecedent 'a sentence' → use 'it', not 'they'."
   },
   {
-    q: "I've been (a)sitting here for (b)hours (c)think about my (d)problem.",
-    parts: ["a","b","c","d"],
+    q: "I've been (a)<u>sitting</u> here for (b)<u>hours</u> (c)<u>think</u> about my (d)<u>problem</u>.",
     errors: ["sitting","hours","think","problem"],
-    correct: "c",
+    correct: 2,
     fix: "thinking",
     why: "A participial phrase modifying the subject requires the -ing form: 'thinking about my problem'."
   },
   {
-    q: "When asked his position on taxes, the politician said: \"There are (a)no easy (b)answers (c).\"\n(a)no  (b)answers  (c).  (d)said",
-    parts: ["a","b","c","d"],
-    errors: ["no","answers",".","said"],
-    correct: "d",
-    fix: "No error",
-    why: "The sentence is grammatically correct. All four underlined parts are acceptable as written."
-  },
-  {
-    q: "He skates (a)well, he (b)sings well, and he runs well, (c)and he (d)skis well.",
-    parts: ["a","b","c","d"],
-    errors: ["well","sings well","and he","skis well"],
-    correct: "c",
-    fix: "Remove the second 'and'; use a comma instead",
-    why: "In a series of parallel clauses, 'and' should appear only before the final item. Having two 'and's creates a faulty list."
-  },
-  {
-    q: "I (a)rather (b)stay home tonight to (c)study for my final exam in (d)history.",
-    parts: ["a","b","c","d"],
+    q: "I (a)<u>rather</u> (b)<u>stay</u> home tonight to (c)<u>study</u> for my final exam in (d)<u>history</u>.",
     errors: ["rather","stay","study","history"],
-    correct: "a",
+    correct: 0,
     fix: "would rather",
     why: "'Rather' alone cannot function as a modal auxiliary. The correct expression is 'would rather' + bare infinitive."
   },
   {
-    q: "The general wanted to be sure he received his (a)commander's-in-chief (b)blessing on (c)his (d)plan.",
-    parts: ["a","b","c","d"],
+    q: "The general wanted to be sure he received his (a)<u>commander's-in-chief</u> (b)<u>blessing</u> on (c)<u>his</u> (d)<u>plan</u>.",
     errors: ["commander's-in-chief","blessing","his","plan"],
-    correct: "a",
+    correct: 0,
     fix: "commander-in-chief's",
     why: "The possessive 's must be attached to the final word of a compound noun: 'commander-in-chief's'."
   },
   {
-    q: "My sister always said she ran like (a)I (b)did when we (c)were (d)young.",
-    parts: ["a","b","c","d"],
+    q: "My sister always said she ran like (a)<u>I</u> (b)<u>did</u> when we (c)<u>were</u> (d)<u>young</u>.",
     errors: ["I","did","were","young"],
-    correct: "a",
+    correct: 0,
     fix: "me",
     why: "When 'like' functions as a preposition, it requires an object pronoun: 'like me', not 'like I'."
   },
   {
-    q: "That was (a)me (b)whom (c)you saw on (d)the train.",
-    parts: ["a","b","c","d"],
+    q: "That was (a)<u>me</u> (b)<u>whom</u> (c)<u>you</u> saw on (d)<u>the train</u>.",
     errors: ["me","whom","you","the train"],
-    correct: "b",
+    correct: 1,
     fix: "who",
     why: "'Who' is required here because it serves as the subject of 'saw' in the relative clause, not as an object."
   },
   {
-    q: "I'm tired after such a long day, so I think I'll (a)lay (b)down and (c)take a (d)nap.",
-    parts: ["a","b","c","d"],
+    q: "I'm tired after such a long day, so I think I'll (a)<u>lay</u> (b)<u>down</u> and (c)<u>take</u> a (d)<u>nap</u>.",
     errors: ["lay","down","take","nap"],
-    correct: "a",
+    correct: 0,
     fix: "lie",
     why: "'Lie down' means to recline (intransitive). 'Lay' is transitive and requires a direct object. Use 'lie down'."
   },
   {
-    q: "Neither rain nor sleet nor snow (a)keep the (b)mailman from his (c)appointed (d)rounds.",
-    parts: ["a","b","c","d"],
+    q: "Neither rain nor sleet nor snow (a)<u>keep</u> the (b)<u>mailman</u> from his (c)<u>appointed</u> (d)<u>rounds</u>.",
     errors: ["keep","mailman","appointed","rounds"],
-    correct: "a",
+    correct: 0,
     fix: "keeps",
     why: "With 'neither…nor', the verb agrees with the nearest subject ('snow', singular) → 'keeps'."
   },
   {
-    q: "It was (a)me at the (b)door when you were (c)taking a (d)bath.",
-    parts: ["a","b","c","d"],
+    q: "It was (a)<u>me</u> at the (b)<u>door</u> when you were (c)<u>taking</u> a (d)<u>bath</u>.",
     errors: ["me","door","taking","bath"],
-    correct: "a",
+    correct: 0,
     fix: "I",
     why: "After the verb 'to be', formal English requires the subject pronoun: 'It was I at the door'."
   },
   {
-    q: "If her grandfather (a)would have lived three more days he (b)would have been (c)100 years (d)old.",
-    parts: ["a","b","c","d"],
+    q: "If her grandfather (a)<u>would have lived</u> three more days he (b)<u>would have been</u> (c)<u>100 years</u> (d)<u>old</u>.",
     errors: ["would have lived","would have been","100 years","old"],
-    correct: "a",
+    correct: 0,
     fix: "had lived",
     why: "In a third conditional if-clause, 'had + past participle' is required, not 'would have + past participle'."
   },
   {
-    q: "To (a)slowly chew one's food is not only (b)a polite, but (c)also a (d)healthy habit.",
-    parts: ["a","b","c","d"],
-    errors: ["slowly chew","a polite","also a","healthy habit"],
-    correct: "b",
+    q: "To (a)<u>slowly chew</u> one's food is not only (b)<u>a polite</u>, but (c)<u>also</u> a (d)<u>healthy habit</u>.",
+    errors: ["slowly chew","a polite","also","healthy habit"],
+    correct: 1,
     fix: "a polite habit",
     why: "'Not only…but also' requires parallel grammatical structures. 'A polite' must be completed to 'a polite habit' to match 'a healthy habit'."
   },
   {
-    q: "The Joneses should (a)of been here by now. I can't (b)understand (c)what's (d)keeping them.",
-    parts: ["a","b","c","d"],
+    q: "The Joneses should (a)<u>of</u> been here by now. I can't (b)<u>understand</u> (c)<u>what's</u> (d)<u>keeping</u> them.",
     errors: ["of","understand","what's","keeping"],
-    correct: "a",
+    correct: 0,
     fix: "have",
     why: "'Should of' is a phonetic misspelling of 'should have'. Modal verbs are always followed by 'have', not 'of'."
   },
   {
-    q: "Before he visited his (a)granddaughter's home, he sent her a (b)gift in (c)the (d)mail.",
-    parts: ["a","b","c","d"],
-    errors: ["granddaughter's","gift","the","mail"],
-    correct: "d",
-    fix: "No error",
-    why: "The sentence is grammatically correct. All underlined parts are acceptable as written."
-  },
-  {
-    q: "When people are careful to keep their cars in good repair, (a)one is (b)rewarded by (c)good car (d)performance.",
-    parts: ["a","b","c","d"],
+    q: "When people are careful to keep their cars in good repair, (a)<u>one is</u> (b)<u>rewarded</u> by (c)<u>good car</u> (d)<u>performance</u>.",
     errors: ["one is","rewarded","good car","performance"],
-    correct: "a",
+    correct: 0,
     fix: "they are",
     why: "The subject 'people' (plural, third person) requires the pronoun 'they', not the impersonal 'one', to maintain agreement."
   },
   {
-    q: "You (a)arent the only one who (b)feels that (c)way about him; a lot of people (d)love him.",
-    parts: ["a","b","c","d"],
+    q: "You (a)<u>arent</u> the only one who (b)<u>feels</u> that (c)<u>way</u> about him; a lot of people (d)<u>love</u> him.",
     errors: ["arent","feels","way","love"],
-    correct: "a",
+    correct: 0,
     fix: "aren't",
     why: "'Arent' is missing the apostrophe required in the contraction 'aren't' (are + not)."
   },
   {
-    q: "Yasser, will you please make up a sentence using the word \"genius\"? Yes, I'll (a)make (b). (c) (d)",
-    parts: ["a","b","c","d"],
-    errors: ["make","—","—","—"],
-    correct: "a",
-    fix: "make one",
-    why: "'Make' here is a transitive verb and requires an object. The correct response is 'I'll make one'."
-  },
-  {
-    q: "The results of this election are more difficult to predict (a)from (b)the (c)last (d)one.",
-    parts: ["a","b","c","d"],
+    q: "The results of this election are more difficult to predict (a)<u>from</u> (b)<u>the</u> (c)<u>last</u> (d)<u>one</u>.",
     errors: ["from","the","last","one"],
-    correct: "a",
+    correct: 0,
     fix: "than",
     why: "Comparisons in English use 'than', not 'from': 'more difficult to predict than the last one'."
   },
   {
-    q: "Sarah said she heard (a)someone in the attic, but when we looked we didn't find (b)someone (c)there (d).",
-    parts: ["a","b","c","d"],
+    q: "Sarah said she heard (a)<u>someone</u> in the attic, but when we looked we didn't find (b)<u>someone</u> (c)<u>there</u> (d)<u>.</u>",
     errors: ["someone","someone","there","."],
-    correct: "b",
+    correct: 1,
     fix: "anyone",
     why: "In negative sentences, the indefinite pronoun 'anyone' (not 'someone') is required after 'didn't'."
   },
   {
-    q: "(a)Almost we had given up hope of ever finding (b)a place to (c)live (d).",
-    parts: ["a","b","c","d"],
+    q: "(a)<u>Almost we</u> had given up hope of ever finding (b)<u>a place</u> to (c)<u>live</u> (d)<u>.</u>",
     errors: ["Almost we","a place","live","."],
-    correct: "a",
+    correct: 0,
     fix: "We had almost",
     why: "The adverb 'almost' modifies the verb and must be placed after the auxiliary: 'We had almost given up hope'."
   },
   {
-    q: "The part of Qena that interested them most (a)were the two colleges (b)they (c)visited (d).",
-    parts: ["a","b","c","d"],
+    q: "The part of Qena that interested them most (a)<u>were</u> the two colleges (b)<u>they</u> (c)<u>visited</u> (d)<u>.</u>",
     errors: ["were","they","visited","."],
-    correct: "a",
+    correct: 0,
     fix: "was",
     why: "The subject is 'The part' (singular), so the verb must be singular: 'was', not 'were'."
   },
   {
-    q: "They too want (a)there names on the (b)programs of the (c)concert (d).",
-    parts: ["a","b","c","d"],
+    q: "They too want (a)<u>there</u> names on the (b)<u>programs</u> of the (c)<u>concert</u> (d)<u>.</u>",
     errors: ["there","programs","concert","."],
-    correct: "a",
+    correct: 0,
     fix: "their",
     why: "'There' is an adverb of place. The possessive adjective 'their' is needed to modify 'names'."
   },
   {
-    q: "Pamela doesn't want to (a)attend the seminar and Sheila doesn't want (b)too (c). (d)",
-    parts: ["a","b","c","d"],
-    errors: ["attend","too",".","."],
-    correct: "b",
+    q: "Pamela doesn't want to (a)<u>attend</u> the seminar and Sheila doesn't want (b)<u>too</u> (c)<u>.</u> (d)",
+    errors: ["attend","too",".","—"],
+    correct: 1,
     fix: "either",
     why: "In negative sentences, 'either' replaces 'too': 'Sheila doesn't want to, either'."
   },
   {
-    q: "I saw the boy (a)playing in the yard (b)with the (c)red (d)scarf.",
-    parts: ["a","b","c","d"],
+    q: "I saw the boy (a)<u>playing in the yard</u> (b)<u>with the</u> (c)<u>red</u> (d)<u>scarf</u>.",
     errors: ["playing in the yard","with the","red","scarf"],
-    correct: "b",
-    fix: "I saw the boy with the red scarf playing in the yard",
+    correct: 1,
+    fix: "Restructure: 'I saw the boy with the red scarf playing in the yard'",
     why: "The modifier 'with the red scarf' is misplaced. It must directly follow 'boy', not 'yard', to avoid ambiguity."
   },
   {
-    q: "Now that the newspaper (a)arrived we can (b)see the scores of the (c)tennis (d)matches.",
-    parts: ["a","b","c","d"],
+    q: "Now that the newspaper (a)<u>arrived</u> we can (b)<u>see</u> the scores of the (c)<u>tennis</u> (d)<u>matches</u>.",
     errors: ["arrived","see","tennis","matches"],
-    correct: "a",
+    correct: 0,
     fix: "has arrived",
     why: "'Now that' signals a recently completed action requiring the present perfect: 'has arrived'."
   },
   {
-    q: "Trip has always enjoyed (a)looking the flowers and (b)walking through (c)the (d)park.",
-    parts: ["a","b","c","d"],
+    q: "Trip has always enjoyed (a)<u>looking the flowers</u> and (b)<u>walking through</u> (c)<u>the</u> (d)<u>park</u>.",
     errors: ["looking the flowers","walking through","the","park"],
-    correct: "a",
+    correct: 0,
     fix: "looking at the flowers",
     why: "The verb 'look' requires the preposition 'at' before its object: 'looking at the flowers'."
   },
   {
-    q: "I didn't see Tom (a)since he and his wife (b)moved to (c)Alex (d).",
-    parts: ["a","b","c","d"],
+    q: "I (a)<u>didn't see</u> Tom since he and his wife (b)<u>moved</u> to (c)<u>Alex</u> (d)<u>.</u>",
     errors: ["didn't see","moved","Alex","."],
-    correct: "a",
+    correct: 0,
     fix: "haven't seen",
     why: "'Since' introducing a time reference from the past to the present requires the present perfect: 'haven't seen'."
   },
   {
-    q: "(a)Our's is not to (b)reason (c)why is the beginning of a (d)famous quotation.",
-    parts: ["a","b","c","d"],
+    q: "(a)<u>Our's</u> is not to (b)<u>reason</u> (c)<u>why</u> is the beginning of a (d)<u>famous</u> quotation.",
     errors: ["Our's","reason","why","famous"],
-    correct: "a",
+    correct: 0,
     fix: "Ours",
     why: "'Ours' is an absolute possessive pronoun and never takes an apostrophe. 'Our's' is incorrect."
   },
   {
-    q: "Oliver won't let his sister play with his toy because he (a)afraid if she (b)will (c)forget to bring it (d)back.",
-    parts: ["a","b","c","d"],
+    q: "Oliver won't let his sister play with his toy because he (a)<u>afraid</u> if she (b)<u>will</u> (c)<u>forget</u> to bring it (d)<u>back</u>.",
     errors: ["afraid","will","forget","back"],
-    correct: "a",
+    correct: 0,
     fix: "is afraid",
     why: "'He afraid' is missing the verb 'to be'. The correct form is 'he is afraid'."
   },
   {
-    q: "The eighth month of the year is (a)august, so named after the (b)Roman emperor (c)Augustus (d).",
-    parts: ["a","b","c","d"],
-    errors: ["august","Roman emperor","Augustus","."],
-    correct: "a",
+    q: "The eighth month of the year is (a)<u>august</u>, so named after the (b)<u>Roman</u> emperor (c)<u>Augustus</u> (d)<u>.</u>",
+    errors: ["august","Roman","Augustus","."],
+    correct: 0,
     fix: "August",
     why: "Names of months are proper nouns and must be capitalized: 'August', not 'august'."
   },
   {
-    q: "Pip said that he must (a)to go home to (b)help his mother, to (c)finish school, and to (d)pay off his debts.",
-    parts: ["a","b","c","d"],
+    q: "Pip said that he must (a)<u>to go</u> home to (b)<u>help</u> his mother, to (c)<u>finish</u> school, and to (d)<u>pay off</u> his debts.",
     errors: ["to go","help","finish","pay off"],
-    correct: "a",
+    correct: 0,
     fix: "go",
     why: "'Must' is a modal verb and is always followed directly by the bare infinitive (without 'to'): 'must go'."
   },
   {
-    q: "The three nations have been quarreling (a)between (b)themselves for (c)many (d)years.",
-    parts: ["a","b","c","d"],
+    q: "The three nations have been quarreling (a)<u>between</u> (b)<u>themselves</u> for (c)<u>many</u> (d)<u>years</u>.",
     errors: ["between","themselves","many","years"],
-    correct: "a",
+    correct: 0,
     fix: "among",
     why: "'Between' is used for two parties; 'among' is used for three or more: 'quarreling among themselves'."
   },
   {
-    q: "What (a)does that word (b)the one you used to describe your brother (c)means the way you (d)used it?",
-    parts: ["a","b","c","d"],
-    errors: ["does","the one you used to describe your brother","means","used it"],
-    correct: "c",
+    q: "What (a)<u>does</u> that word — the one you used to describe your brother — (b)<u>means</u> the way you (c)<u>used</u> (d)<u>it</u>?",
+    errors: ["does","means","used","it"],
+    correct: 1,
     fix: "mean",
     why: "After the auxiliary 'does', the base form of the verb is required: 'What does that word mean?'"
   },
   {
-    q: "Mrs. Mona had (a)rather spend the entire summer in the heat of (b)Qena than (c)travel with her cousin to (d)Hurghada.",
-    parts: ["a","b","c","d"],
-    errors: ["rather","Qena","travel","Hurghada"],
-    correct: "a",
+    q: "Mrs. Mona (a)<u>had rather</u> spend the entire summer in the heat of (b)<u>Qena</u> than (c)<u>travel</u> with her cousin to (d)<u>Hurghada</u>.",
+    errors: ["had rather","Qena","travel","Hurghada"],
+    correct: 0,
     fix: "would rather",
     why: "'Had rather' is not standard modern usage. The correct expression is 'would rather' + bare infinitive."
   },
   {
-    q: "He gently put the new camera on the desk (a)which his (b)sister had (c)bought (d).",
-    parts: ["a","b","c","d"],
+    q: "He gently put the new camera on the desk (a)<u>which</u> his (b)<u>sister</u> had (c)<u>bought</u> (d)<u>.</u>",
     errors: ["which","sister","bought","."],
-    correct: "a",
-    fix: "that his sister had bought (or restructure: 'He gently put on the desk the camera his sister had bought')",
+    correct: 0,
+    fix: "Restructure: 'He gently put on the desk the camera which his sister had bought'",
     why: "The relative clause 'which his sister had bought' is misplaced and appears to modify 'desk'. Restructure so it clearly modifies 'camera'."
   },
   {
-    q: "He didn't say he (a)will bring the books (b)tomorrow, (c)did (d)he?",
-    parts: ["a","b","c","d"],
+    q: "He didn't say he (a)<u>will</u> bring the books (b)<u>tomorrow</u>, (c)<u>did</u> (d)<u>he</u>?",
     errors: ["will","tomorrow","did","he"],
-    correct: "a",
+    correct: 0,
     fix: "would",
     why: "In reported speech following a past-tense main clause, 'will' shifts back to 'would': 'he didn't say he would bring'."
   },
   {
-    q: "She (a)speaks (b)always English to her boss while she is (c)in the (d)office.",
-    parts: ["a","b","c","d"],
+    q: "She (a)<u>speaks</u> (b)<u>always</u> English to her boss while she is (c)<u>in the</u> (d)<u>office</u>.",
     errors: ["speaks","always","in the","office"],
-    correct: "b",
+    correct: 1,
     fix: "always speaks",
     why: "Adverbs of frequency such as 'always' are placed between the subject and the main verb: 'She always speaks English'."
   },
   {
-    q: "Just as Janet was leaving, we told her we needed eggs (a)cheese and (b)orange juice for (c)our (d)picnic.",
-    parts: ["a","b","c","d"],
+    q: "Just as Janet was leaving, we told her we needed eggs (a)<u>cheese</u> and (b)<u>orange juice</u> for (c)<u>our</u> (d)<u>picnic</u>.",
     errors: ["cheese","orange juice","our","picnic"],
-    correct: "a",
+    correct: 0,
     fix: "eggs, cheese,",
     why: "Items in a list of three or more must be separated by commas: 'eggs, cheese, and orange juice'."
   },
   {
-    q: "When we were little and would visit her, my grandmother often gave presents to my sister and (a)myself (b). (c) (d)",
-    parts: ["a","b","c","d"],
-    errors: ["myself","—","—","—"],
-    correct: "a",
+    q: "When we were little and would visit her, my grandmother often gave presents to my sister and (a)<u>myself</u> (b)<u>.</u> (c) (d)",
+    errors: ["myself",".","—","—"],
+    correct: 0,
     fix: "me",
     why: "'Myself' is a reflexive/emphatic pronoun and cannot substitute for a simple indirect object. Use the object pronoun 'me'."
   },
   {
-    q: "Because he had not been able to hear well, Danny asked what the question (a)was (b)? (c) (d)",
-    parts: ["a","b","c","d"],
+    q: "Because he had not been able to hear well, Danny asked what the question (a)<u>was</u> (b)<u>?</u> (c) (d)",
     errors: ["was","?","—","—"],
-    correct: "b",
+    correct: 1,
     fix: "Remove the question mark; use a period",
     why: "This is an indirect (embedded) question within a declarative sentence. It uses statement word order and ends with a period, not a question mark."
   },
   {
-    q: "The critics all said that she was (a)neither attractive nor (b)did she have any (c)talent (d).",
-    parts: ["a","b","c","d"],
+    q: "The critics all said that she was (a)<u>neither attractive</u> nor (b)<u>did she have</u> any (c)<u>talent</u> (d)<u>.</u>",
     errors: ["neither attractive","did she have","talent","."],
-    correct: "b",
+    correct: 1,
     fix: "nor talented",
     why: "'Neither…nor' requires parallel grammatical structures. 'Neither attractive' (adjective) must be matched by 'nor talented' (adjective), not by a clause."
   },
   {
-    q: "Her uncle, along with her two cousins, (a)demand that she (b)stay in town (c)one more (d)day.",
-    parts: ["a","b","c","d"],
+    q: "Her uncle, along with her two cousins, (a)<u>demand</u> that she (b)<u>stay</u> in town (c)<u>one more</u> (d)<u>day</u>.",
     errors: ["demand","stay","one more","day"],
-    correct: "a",
+    correct: 0,
     fix: "demands",
     why: "'Along with' is a parenthetical phrase and does not change the grammatical number of the subject. 'Her uncle' (singular) requires 'demands'."
   },
   {
-    q: "We got up early, ate breakfast, and (a)the house was cleaned—all before my (b)aunt (c)arrived (d).",
-    parts: ["a","b","c","d"],
+    q: "We got up early, ate breakfast, and (a)<u>the house was cleaned</u>—all before my (b)<u>aunt</u> (c)<u>arrived</u> (d)<u>.</u>",
     errors: ["the house was cleaned","aunt","arrived","."],
-    correct: "a",
+    correct: 0,
     fix: "cleaned the house",
     why: "Parallel structure requires all verbs to share the same subject and voice: 'got up, ate breakfast, and cleaned the house' (all active)."
   },
   {
-    q: "(a)Whom shall (b)I say (c)is (d)calling?",
-    parts: ["a","b","c","d"],
+    q: "(a)<u>Whom</u> shall (b)<u>I</u> say (c)<u>is</u> (d)<u>calling</u>?",
     errors: ["Whom","I","is","calling"],
-    correct: "a",
+    correct: 0,
     fix: "Who",
     why: "'Who' is the subject of the embedded clause 'is calling'. 'Whom' is an object form and is incorrect here."
   },
   {
-    q: "When you go to visit the Stevensons tomorrow, please bring them (a)theses cake (b)recipes (c). (d)",
-    parts: ["a","b","c","d"],
-    errors: ["theses","recipes",".","."],
-    correct: "a",
+    q: "When you go to visit the Stevensons tomorrow, please bring them (a)<u>theses</u> cake (b)<u>recipes</u> (c)<u>.</u> (d)",
+    errors: ["theses","recipes",".","—"],
+    correct: 0,
     fix: "these",
     why: "'Theses' is the plural of the noun 'thesis'. The demonstrative adjective needed here is 'these'."
   },
   {
-    q: "Yesterday the foreman spoke to both of us, Aly and (a)I, about our (b)work (c)record. He was (d)impressed.",
-    parts: ["a","b","c","d"],
+    q: "Yesterday the foreman spoke to both of us, Aly and (a)<u>I</u>, about our (b)<u>work</u> (c)<u>record</u>. He was (d)<u>impressed</u>.",
     errors: ["I","work","record","impressed"],
-    correct: "a",
+    correct: 0,
     fix: "me",
     why: "The appositive renames 'us' (object pronoun), so it must also use the object form: 'Aly and me'."
   },
   {
-    q: "Ahmad's car is certainly faster than (a)any in (b)the (c)race (d).",
-    parts: ["a","b","c","d"],
+    q: "Ahmad's car is certainly faster than (a)<u>any</u> in (b)<u>the</u> (c)<u>race</u> (d)<u>.</u>",
     errors: ["any","the","race","."],
-    correct: "a",
+    correct: 0,
     fix: "any other",
     why: "When comparing a member to others in the same group, 'any other' is required to avoid a logical contradiction: 'faster than any other car in the race'."
   },
   {
-    q: "In response to Adam's question as to which (a)restraint we were going to, I (b)replied, (c)the (d)nearest.",
-    parts: ["a","b","c","d"],
+    q: "In response to Adam's question as to which (a)<u>restraint</u> we were going to, I (b)<u>replied</u>, (c)<u>the</u> (d)<u>nearest</u>.",
     errors: ["restraint","replied","the","nearest"],
-    correct: "a",
+    correct: 0,
     fix: "restaurant",
     why: "'Restraint' means self-control. The intended word is 'restaurant'. This is a vocabulary/spelling error."
-  }
+  },
+  {
+    q: "He skates (a)<u>well</u>, he (b)<u>sings well</u>, and he runs well, (c)<u>and he</u> (d)<u>skis well</u>.",
+    errors: ["well","sings well","and he","skis well"],
+    correct: 2,
+    fix: "Remove the second 'and'; use a comma before 'he skis well'",
+    why: "In a series of parallel clauses, 'and' should appear only before the final item. Having two 'and's creates a faulty list."
+  },
+  {
+    q: "Before he visited his (a)<u>granddaughter's</u> home, he sent her a (b)<u>gift</u> in (c)<u>the</u> (d)<u>mail</u>.",
+    errors: ["granddaughter's","gift","the","mail"],
+    correct: -1,
+    fix: "No error",
+    why: "The sentence is grammatically correct. All underlined parts are acceptable as written."
+  },
+  {
+    q: "Yasser, will you please make up a sentence using the word \"genius\"? Yes, I'll (a)<u>make</u> (b)<u>.</u> (c) (d)",
+    errors: ["make",".","—","—"],
+    correct: 0,
+    fix: "make one",
+    why: "'Make' here is a transitive verb and requires an object. The correct response is 'I'll make one'."
+  },
+  {
+    q: "When asked his position on taxes, the politician said: \"There are (a)<u>no</u> easy (b)<u>answers</u> (c)<u>.</u>\" (d)",
+    errors: ["no","answers",".","—"],
+    correct: -1,
+    fix: "No error",
+    why: "The sentence is grammatically correct. All underlined parts are acceptable as written."
+  },
 ];
 
-/* ════════════════════════════════════
-   STATE
-════════════════════════════════════ */
-let artScore=0,artAnswered=0,artDone=false;
-let presScore=0,presAnswered=0,presDone=false;
-let vocabScore=0,vocabAnswered=0,vocabDone=false;
-let corrScore=0,corrAnswered=0,corrDone=false;
-
-/* ════════════════════════════════════
-   NAVIGATION
-════════════════════════════════════ */
-function showPage(name, btn){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+name).classList.add('active');
-  btn.classList.add('active');
-  updateProgress(name);
-}
-
-function updateProgress(name){
-  const map={grammar:0,vocab:33,correction:66,defs:100};
-  document.getElementById('progressFill').style.width=(map[name]||0)+'%';
-}
-
-/* ════════════════════════════════════
-   GRAMMAR TABS
-════════════════════════════════════ */
-function showGrammarTab(tab){
-  document.getElementById('grammar-explain').style.display='none';
-  document.getElementById('grammar-articles-q').style.display='none';
-  document.getElementById('grammar-present-q').style.display='none';
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  const tabMap={explain:'grammar-explain','articles-q':'grammar-articles-q','present-q':'grammar-present-q'};
-  document.getElementById(tabMap[tab]).style.display='block';
-  event.target.classList.add('active');
-  if(tab==='articles-q'&&!artDone&&artAnswered===0) startArticlesQuiz();
-  if(tab==='present-q'&&!presDone&&presAnswered===0) startPresentQuiz();
-}
-
-/* ════════════════════════════════════
-   QUIZ RENDERER
-════════════════════════════════════ */
-function renderQuiz(container, data, prefix, onAnswer){
-  const el = document.getElementById(container);
-  el.innerHTML='';
-  data.forEach((item,i)=>{
-    const div=document.createElement('div');
-    div.className='q-card';
-    div.id=`${prefix}-q-${i}`;
-    div.innerHTML=`
-      <div class="q-num">Question ${i+1} of ${data.length}</div>
-      <div class="q-text">${item.q}</div>
-      <div class="options" id="${prefix}-opts-${i}">
-        ${item.choices.map((c,ci)=>`<button class="opt" onclick="onOpt('${prefix}',${i},${ci},${item.ans})">${String.fromCharCode(65+ci)}. ${c}</button>`).join('')}
-      </div>
-      <div id="${prefix}-fb-${i}" style="margin-top:10px;display:none"></div>
-    `;
-    el.appendChild(div);
-  });
-}
-
-function onOpt(prefix, qi, chosen, correct){
-  const opts=document.querySelectorAll(`#${prefix}-opts-${qi} .opt`);
-  opts.forEach(o=>o.disabled=true);
-  opts[chosen].classList.add(chosen===correct?'correct':'wrong');
-  if(chosen!==correct) opts[correct].classList.add('reveal');
-
-  const fb=document.getElementById(`${prefix}-fb-${qi}`);
-  fb.style.display='block';
-
-  if(prefix==='art'){
-    const hint=articlesData[qi].hint||'';
-    const ok=chosen===correct;
-    artAnswered++;if(ok)artScore++;
-    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+articlesData[qi].choices[correct]}${hint?'<br><small>'+hint+'</small>':''}</div>`;
-    if(artAnswered===articlesData.length){artDone=true;showScore('art',artScore,articlesData.length);}
-  }
-  else if(prefix==='pres'){
-    const ok=chosen===correct;
-    presAnswered++;if(ok)presScore++;
-    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+presentData[qi].choices[correct]}</div>`;
-    if(presAnswered===presentData.length){presDone=true;showScore('pres',presScore,presentData.length);}
-  }
-  else if(prefix==='vocab'){
-    const ok=chosen===correct;
-    vocabAnswered++;if(ok)vocabScore++;
-    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+vocabData[qi].choices[correct]}</div>`;
-    if(vocabAnswered===vocabData.length){vocabDone=true;showScore('vocab',vocabScore,vocabData.length);}
-  }
-  else if(prefix==='corr'){
-    const ok=chosen===correct;
-    corrAnswered++;if(ok)corrScore++;
-    const item=corrData[qi];
-    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – the error is option ('+item.correct.toUpperCase()+')'}<br><small><strong>Fix:</strong> ${item.fix}<br><strong>Why:</strong> ${item.why}</small></div>`;
-    if(corrAnswered===corrData.length){corrDone=true;showScore('corr',corrScore,corrData.length);}
-  }
-}
-
-function showScore(prefix, score, total){
-  const pct=Math.round(score/total*100);
-  let emoji=pct>=80?'🏆':pct>=60?'👍':'📚';
-  document.getElementById(`${prefix}-score-big`).textContent=`${emoji} ${score}/${total}`;
-  document.getElementById(`${prefix}-score-box`).style.display='block';
-  document.getElementById(`${prefix}-score-box`).scrollIntoView({behavior:'smooth'});
-}
-
-/* ════════════════════════════════════
-   ARTICLES QUIZ
-════════════════════════════════════ */
-function startArticlesQuiz(){
-  artScore=0;artAnswered=0;artDone=false;
-  document.getElementById('art-score-box').style.display='none';
-  renderQuiz('art-quiz-container', articlesData, 'art', null);
-}
-
-/* ════════════════════════════════════
-   PRESENT TENSES QUIZ
-════════════════════════════════════ */
-const presentData=[
+/* ══════════════════════════════════════
+   PRESENT TENSES DATA (20 questions)
+══════════════════════════════════════ */
+const presentData = [
   {q:"The swimming bath ___ at 9:00 and ___ at 12:30 every day.",choices:["opens / closes","is opening / is closing","opened / closed","open / close"],ans:0},
   {q:"What time ___ in Qena?",choices:["do the banks close","are the banks closing","the banks close","did the banks close"],ans:0},
   {q:"I have a car but I ___ it very often.",choices:["don't use","am not using","didn't use","not use"],ans:0},
@@ -1151,15 +945,157 @@ const presentData=[
   {q:"I'll stay here ___ you get back.",choices:["until","since","for","while"],ans:0},
 ];
 
+/* ══════════════════════════════════════
+   STATE
+══════════════════════════════════════ */
+let artScore=0,artAnswered=0,artDone=false;
+let presScore=0,presAnswered=0,presDone=false;
+let vocabScore=0,vocabAnswered=0,vocabDone=false;
+let corrScore=0,corrAnswered=0,corrDone=false;
+
+/* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+function showPage(name, btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  btn.classList.add('active');
+  updateProgress(name);
+}
+function updateProgress(name){
+  const map={grammar:0,vocab:33,correction:66,defs:100};
+  document.getElementById('progressFill').style.width=(map[name]||0)+'%';
+}
+
+/* ══════════════════════════════════════
+   GRAMMAR TABS
+══════════════════════════════════════ */
+function showGrammarTab(tab){
+  document.getElementById('grammar-explain').style.display='none';
+  document.getElementById('grammar-articles-q').style.display='none';
+  document.getElementById('grammar-present-q').style.display='none';
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  const tabMap={explain:'grammar-explain','articles-q':'grammar-articles-q','present-q':'grammar-present-q'};
+  document.getElementById(tabMap[tab]).style.display='block';
+  event.target.classList.add('active');
+  if(tab==='articles-q'&&!artDone&&artAnswered===0) startArticlesQuiz();
+  if(tab==='present-q'&&!presDone&&presAnswered===0) startPresentQuiz();
+}
+
+/* ══════════════════════════════════════
+   GENERIC QUIZ OPTION HANDLER
+══════════════════════════════════════ */
+function onOpt(prefix, qi, chosen, correct){
+  // For "no error" questions correct === -1; treat any choice as wrong except we
+  // highlight the chosen button as informational only.
+  const noError = (correct === -1);
+  const opts = document.querySelectorAll(`#${prefix}-opts-${qi} .opt`);
+  opts.forEach(o=>o.disabled=true);
+
+  if(noError){
+    // All options are "wrong" in a no-error question; just mark chosen as wrong
+    opts[chosen].classList.add('wrong');
+  } else {
+    opts[chosen].classList.add(chosen===correct?'correct':'wrong');
+    if(chosen!==correct) opts[correct].classList.add('reveal');
+  }
+
+  const fb=document.getElementById(`${prefix}-fb-${qi}`);
+  fb.style.display='block';
+
+  if(prefix==='art'){
+    const hint=articlesData[qi].hint||'';
+    const ok=(!noError && chosen===correct);
+    artAnswered++;if(ok)artScore++;
+    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+articlesData[qi].choices[correct]}${hint?'<br><small>'+hint+'</small>':''}</div>`;
+    if(artAnswered===articlesData.length){artDone=true;showScore('art',artScore,articlesData.length);}
+  }
+  else if(prefix==='pres'){
+    const ok=chosen===correct;
+    presAnswered++;if(ok)presScore++;
+    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+presentData[qi].choices[correct]}</div>`;
+    if(presAnswered===presentData.length){presDone=true;showScore('pres',presScore,presentData.length);}
+  }
+  else if(prefix==='vocab'){
+    const ok=chosen===correct;
+    vocabAnswered++;if(ok)vocabScore++;
+    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${ok?'✅ Correct!':'❌ Wrong – correct: '+vocabData[qi].choices[correct]}</div>`;
+    if(vocabAnswered===vocabData.length){vocabDone=true;showScore('vocab',vocabScore,vocabData.length);}
+  }
+  else if(prefix==='corr'){
+    const item=corrData[qi];
+    const isNoError=(item.correct===-1);
+    const ok=isNoError?false:(chosen===item.correct);
+    corrAnswered++;if(ok)corrScore++;
+    let feedbackText;
+    if(isNoError){
+      feedbackText=`ℹ️ No error – all underlined parts are grammatically correct.<br><small>${item.why}</small>`;
+    } else {
+      feedbackText=`${ok?'✅ Correct!':'❌ Wrong – the error is option ('+['A','B','C','D'][item.correct]+')'}<br><small><strong>Fix:</strong> ${item.fix}<br><strong>Why:</strong> ${item.why}</small>`;
+    }
+    fb.innerHTML=`<div class="feedback ${ok?'ok':'bad'}">${feedbackText}</div>`;
+    if(corrAnswered===corrData.length){corrDone=true;showScore('corr',corrScore,corrData.length);}
+  }
+}
+
+function showScore(prefix, score, total){
+  const pct=Math.round(score/total*100);
+  const emoji=pct>=80?'🏆':pct>=60?'👍':'📚';
+  document.getElementById(`${prefix}-score-big`).textContent=`${emoji} ${score}/${total}`;
+  document.getElementById(`${prefix}-score-box`).style.display='block';
+  document.getElementById(`${prefix}-score-box`).scrollIntoView({behavior:'smooth'});
+}
+
+/* ══════════════════════════════════════
+   ARTICLES QUIZ
+══════════════════════════════════════ */
+function startArticlesQuiz(){
+  artScore=0;artAnswered=0;artDone=false;
+  document.getElementById('art-score-box').style.display='none';
+  const el=document.getElementById('art-quiz-container');
+  el.innerHTML='';
+  articlesData.forEach((item,i)=>{
+    const div=document.createElement('div');
+    div.className='q-card';
+    div.innerHTML=`
+      <div class="q-num">Question ${i+1} of ${articlesData.length}</div>
+      <div class="q-text">${item.q}</div>
+      <div class="options" id="art-opts-${i}">
+        ${item.choices.map((c,ci)=>`<button class="opt" onclick="onOpt('art',${i},${ci},${item.ans})">${String.fromCharCode(65+ci)}. ${c}</button>`).join('')}
+      </div>
+      <div id="art-fb-${i}" style="margin-top:10px;display:none"></div>
+    `;
+    el.appendChild(div);
+  });
+}
+
+/* ══════════════════════════════════════
+   PRESENT TENSES QUIZ
+══════════════════════════════════════ */
 function startPresentQuiz(){
   presScore=0;presAnswered=0;presDone=false;
   document.getElementById('pres-score-box').style.display='none';
-  renderQuiz('pres-quiz-container', presentData, 'pres', null);
+  const el=document.getElementById('pres-quiz-container');
+  el.innerHTML='';
+  presentData.forEach((item,i)=>{
+    const div=document.createElement('div');
+    div.className='q-card';
+    div.innerHTML=`
+      <div class="q-num">Question ${i+1} of ${presentData.length}</div>
+      <div class="q-text">${item.q}</div>
+      <div class="options" id="pres-opts-${i}">
+        ${item.choices.map((c,ci)=>`<button class="opt" onclick="onOpt('pres',${i},${ci},${item.ans})">${String.fromCharCode(65+ci)}. ${c}</button>`).join('')}
+      </div>
+      <div id="pres-fb-${i}" style="margin-top:10px;display:none"></div>
+    `;
+    el.appendChild(div);
+  });
 }
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════
    VOCABULARY QUIZ
-════════════════════════════════════ */
+══════════════════════════════════════ */
 function startVocabQuiz(){
   vocabScore=0;vocabAnswered=0;vocabDone=false;
   document.getElementById('vocab-score-box').style.display='none';
@@ -1180,9 +1116,9 @@ function startVocabQuiz(){
   });
 }
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════
    CORRECTION QUIZ
-════════════════════════════════════ */
+══════════════════════════════════════ */
 function startCorrectionQuiz(){
   corrScore=0;corrAnswered=0;corrDone=false;
   document.getElementById('corr-score-box').style.display='none';
@@ -1192,12 +1128,14 @@ function startCorrectionQuiz(){
     const letters=['A','B','C','D'];
     const div=document.createElement('div');
     div.className='q-card';
+    // Build option buttons: each maps to index 0–3, correct is item.correct (or -1 for no-error)
+    const correctIdx = item.correct; // -1 means no error
     div.innerHTML=`
       <div class="q-num">Question ${i+1} of ${corrData.length}</div>
       <div class="q-text">${item.q}</div>
-      <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:8px">Which underlined part (a, b, c, or d) contains an error?</p>
+      <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:8px">Which underlined part (A, B, C, or D) contains an error?</p>
       <div class="options" id="corr-opts-${i}">
-        ${['a','b','c','d'].map((l,ci)=>`<button class="opt" onclick="onOpt('corr',${i},${ci},${['a','b','c','d'].indexOf(item.correct)})">${letters[ci]}. ${item.errors[ci]||'—'}</button>`).join('')}
+        ${item.errors.map((e,ci)=>`<button class="opt" onclick="onOpt('corr',${i},${ci},${correctIdx})">${letters[ci]}. ${e}</button>`).join('')}
       </div>
       <div id="corr-fb-${i}" style="margin-top:10px;display:none"></div>
     `;
@@ -1205,9 +1143,9 @@ function startCorrectionQuiz(){
   });
 }
 
-/* ════════════════════════════════════
+/* ══════════════════════════════════════
    INIT
-════════════════════════════════════ */
+══════════════════════════════════════ */
 window.addEventListener('DOMContentLoaded',()=>{
   updateProgress('grammar');
   startVocabQuiz();
@@ -1215,4 +1153,4 @@ window.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 </body>
-  </html>
+ </html>
